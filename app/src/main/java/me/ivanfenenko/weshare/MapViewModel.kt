@@ -23,14 +23,14 @@ class MapViewModel @Inject constructor(
     fun getScooters() = scooters
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    private fun onViewAttached() {
+    fun onViewAttached() {
         compositeDisposable = CompositeDisposable()
 
         loadScooters()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    private fun onViewDetached() {
+    fun onViewDetached() {
         compositeDisposable?.dispose()
         compositeDisposable = null
     }

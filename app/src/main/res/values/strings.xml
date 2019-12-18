@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeShare</string>
+    <string name="label_updated_at">Last updated at %1$s</string>
 </resources>

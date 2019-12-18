@@ -11,7 +11,7 @@ class GetScootersUseCaseImpl @Inject constructor(
 ) : GetScootersUseCase {
 
     override fun execute(): Observable<List<Scooter>> {
-        return Observable.interval(5, TimeUnit.SECONDS)
+        return Observable.interval(0, 5, TimeUnit.SECONDS)
             .switchMapSingle {
                 repository.loadScooters()
             }
